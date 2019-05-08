@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Hello World</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div id="application-root"></div>
+
+<script
+  src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script
+  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+<script
+src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+<script type="text/babel">
+  function App(prop) {
+    return (
+    <div>
+      <header>
+        <h1>{prop.name} Resume</h1>
+      </header>
+      
+      <section>
+        <address>
+          <p>Name: {prop.name}</p>
+          <p>Email Address:<a href="mailto:sallystudent@gmail.com">sallystudent@gmail.com</a></p>
+          <p>Phone Number: 123-456-7890</p>
+        </address>
+        <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="Sally Student Photo" />
+      </section>
+      
+      <main>
+        <section>
+          <h2>Education</h2>
+          <ul>
+            <li>High School Diploma</li>
+          </ul>
+          <p>Hutto High School, 101 Farm to Market 685, Hutto, TX 78634</p>
+          <p>Gratuated Spring of 2009 with a 3.95 GPA</p>
+          <ul>
+            <li>Bachelor of Art's, Computer Science Degree</li>
+          </ul>
+          <p>Texas State University, 601 University Dr, San Marcos, TX 78666</p>
+          <p>Gratuated Spring of 2013 with Honors</p>
+          <br />
+        </section>
+    
+        <section>
+          <h2>Work History</h2>
+          <ul>
+            <li>Software Developer Intern</li>
+          </ul>
+          <p>June, 2013 - December, 2013</p>
+          <p>Google Austin, 500 W 2nd St, Austin, TX 78701</p>
+          <p>Duties Included:</p>
+          <ul>
+            <li className="subtext">Lorem ipsum dolor sit amet, mei ei omnesque facilisis. Ne duis partiendo vulputate his, et his etiam petentium, instructior definitiones per ad.</li>
+          </ul>
+          <ul>
+            <li>Web Developer</li>
+          </ul>
+          <p>January 2014 - Current Day</p>
+          <p>Apple Inc. Austin Campus, 12545 Riata Vista Cir, Austin, TX 78727</p>
+          <p>Duties Include:</p>
+          <ul>
+            <li className="subtext">Te eum indoctum vulputate instructior, affert cetero ne duo. Mei congue omnesque qualisque et, vis omnesque invidunt consequuntur ut.</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+    );
+  }
+
+  // Nested elements inside the App
+  ReactDOM.render(
+    <App name='Steven Thornton'/>,
+    document.querySelector('#application-root')
+  );  
+</script>
+</body>
+</html>
